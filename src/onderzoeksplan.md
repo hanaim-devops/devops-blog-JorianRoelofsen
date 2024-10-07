@@ -7,15 +7,15 @@ Hoe kan Keycloak effectief worden ingezet voor gebruikersbeheer en authenticatie
 ## 2. Deelvragen
 
 1. Wat is Keycloak?
-**Methode: Literatuuronderzoek**
+**Methode: Literature Study**
 Dit deel onderzoekt wat Keycloak is, de architectuur ervan en de basisfunctionaliteiten.
 
 2. Wat zijn de voordelen en nadelen van Keycloak ten opzichte van andere identity management tools?
-**Methode: Vergelijkend Onderzoek**
+**Methode: Community Research**
 Vergelijking van Keycloak met andere identity management tools zoals Okta, Auth0, en Azure AD.
 
 3. Waarom is Keycloak de juiste keuze voor een microservices-architectuur?
-**Methode: Literatuuronderzoek**
+**Methode: Literature Study**
 Focus op waarom Keycloak past binnen een microservices-architectuur en hoe het omgaat met identity management en toegang in gedistribueerde systemen.
 
 4. Hoe kan je Keycloak integreren in een microservices-architectuur?
