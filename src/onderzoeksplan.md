@@ -20,7 +20,7 @@ Focus op waarom Keycloak past binnen een microservices-architectuur en hoe het o
 Dit deel onderzoekt praktische implementaties en integratiemethoden.
 
 ## 3. Verwachte Resultaten
-Een overzicht van de belangrijkste kenmerken en voordelen van Keycloak.
-Een gedetailleerde vergelijking tussen Keycloak en andere populaire identity management tools.
-Concrete redenen waarom Keycloak een goede keuze is voor microservices.
-Een duidelijke gids voor de integratie van Keycloak in microservices-architecturen, ondersteund met een proof-of-concept.
+Een overzicht van de belangrijkste kenmerken en voordelen van Keycloak.  
+Een gedetailleerde vergelijking tussen Keycloak en andere populaire identity management tools.  
+Concrete redenen waarom Keycloak een goede keuze is voor microservices.  
+Een duidelijke gids voor de integratie van Keycloak in microservices-architecturen, ondersteund met een proof-of-concept.  
