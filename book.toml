@@ -1,9 +1,9 @@
 [book]
-authors = ["Bart"]
+authors = ["Jorian Roelofsen"]
 language = "nl"
 multilingual = false
 src = "src"
-title = "DevOps Blog"
+title = "Een andere kijk op inloggen: Keycloak voor DevOps"
 
 [output.linkcheck]
 warning-policy = "ignore"
