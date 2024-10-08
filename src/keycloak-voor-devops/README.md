@@ -89,4 +89,4 @@ https://permify.co/post/top-open-source-keycloak-alternatives/
 https://fusionauth.io/guides/keycloak-alternatives/	
 -->
 
-## Keycloak in microservices?
+## Keycloak in een microservices-architectuur?
