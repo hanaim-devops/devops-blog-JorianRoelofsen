@@ -190,3 +190,27 @@ Keycloak kan zeer effectief worden ingezet voor gebruikersbeheer en authenticati
 Daarnaast biedt Keycloak extra beveiligingsopties zoals twee-factor authenticatie (2FA) en de mogelijkheid om gebruikersregistratie en -beheer centraal te regelen. Hoewel Keycloak zelf-hosting en onderhoud vereist, wat kan zorgen voor enige complexiteit, wegen de voordelen op het gebied van flexibiliteit, kostenbesparing (door het open-source karakter), en community-ondersteuning zwaar in moderne IT-omgevingen.
 
 Kortom, Keycloak is een veelzijdige en krachtige IAM-oplossing die organisaties in staat stelt om veilige en schaalbare gebruikersauthenticatie te implementeren zonder afbreuk te doen aan flexibiliteit of gebruikerservaring.
+
+## Bronnen
+
+Cloud Native Computing Foundation. (2023, April 11). Keycloak joins CNCF as an incubating project. https://www.cncf.io/blog/2023/04/11/keycloak-joins-cncf-as-an-incubating-project/
+
+FusionAuth. (n.d.). Keycloak alternatives. https://fusionauth.io/guides/keycloak-alternatives/
+
+GitHub. (n.d.). Keycloak quickstarts repository. https://raw.githubusercontent.com/keycloak/keycloak-quickstarts/latest/kubernetes/keycloak.yaml
+
+Intension. (n.d.). Keycloak - advantages and disadvantages. https://www.intension.de/en/infoblog/keycloak-advantages-disadvantages/
+
+Keycloak. (n.d.). Getting started with Keycloak on Kubernetes. https://www.keycloak.org/getting-started/getting-started-kube
+
+Permify. (n.d.). Top open-source Keycloak alternatives. https://permify.co/post/top-open-source-keycloak-alternatives/
+
+Pretius. (n.d.). Keycloak SSO implementation. https://pretius.com/blog/keycloak-sso/
+
+Reddit. (n.d.). FreeIPA vs OpenLDAP vs Keycloak pros and cons. https://www.reddit.com/r/linuxadmin/comments/gdegxl/keycloak_freeipa_openldap_proscons/
+
+Reddit. (n.d.). Is Keycloak worth the maintenance?. https://www.reddit.com/r/devops/comments/1ak7pex/is_keycloak_worth_the_maintenance/
+
+StackOverflow. (2018). Should I use Keycloak or not?. https://stackoverflow.com/questions/49606861/should-i-use-keycloak-or-not
+
+Zluri. (n.d.). Top open-source Keycloak alternatives. https://www.zluri.com/blog/keycloak-alternatives/
