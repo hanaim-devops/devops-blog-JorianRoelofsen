@@ -89,4 +89,96 @@ https://permify.co/post/top-open-source-keycloak-alternatives/
 https://fusionauth.io/guides/keycloak-alternatives/	
 -->
 
-## Keycloak in een microservices-architectuur?
+## Keycloak in een microfrontend-architectuur?
+
+Voor deze vraag heb ik zelf een applicatie gebouwd met een microfrontend-architectuur en Keycloak geïntegreerd voor authenticatie en autorisatie. De applicatie bestaat uit drie microfrontends. Keycloak wordt gebruikt voor het inloggen en autoriseren van gebruikers. Bij het inloggen wordt een JWT-token gegenereerd en opgeslagen in de browser. Deze token wordt vervolgens gebruikt om de gebruiker te autoriseren voor toegang tot de ander microfrontends.
+
+Om te beginnen heb ik een keycloak server en 3 react frontends opgezet en geconfigureerd. De keycloak server draait op `http://localhost:8080` en de frontends op `http://localhost:30081`, `http://localhost:30082` en `http://localhost:30083`. Voor het maken van de keycloak instance heb ik gebruik gemaakt van de informatie gegeven in de github repository van keycloak([TODO: bron](https://raw.githubusercontent.com/keycloak/keycloak-quickstarts/latest/kubernetes/keycloak.yaml)). Voor het maken van de react pods heb ik de volgende yaml files gebruikt:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microfrontend-1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: microfrontend-1
+  template:
+    metadata:
+      labels:
+        app: microfrontend-1
+    spec:
+      containers:
+      - name: microfrontend-1
+        image: jorianroelofsen13/microfrontend-1-image:latest  # Update with the correct image name
+        imagePullPolicy: "Always"
+        ports:
+        - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: microfrontend-1
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 30081  # Change as necessary
+  selector:
+    app: microfrontend-1
+```
+
+In de `microfrontend-2` en `microfrontend-3` yaml files heb ik de `microfrontend-1` vervangen met `microfrontend-2` en `microfrontend-3` en de nodePort aangepast naar `30082` en `30083` respectievelijk.
+
+Vervolgens heb ik de keycloak server geconfigureerd met een realm, client, voor de volledige tutorial zie de volgende bron([TODO: bron](https://www.keycloak.org/getting-started/getting-started-kube)). Daarnaast heb ik ook nog een extra optie toegevoegd die er voor zorgt dat een gebruiker kan registreren. Dit heb ik gedaan door de `registration` optie aan te zetten in de realm settings.
+![registratie aanzetten](./plaatjes/image.png)
+
+De client is geconfigureerd met de redirect uri's van de frontends en de frontends zijn geconfigureerd met de client id en de keycloak server url. De frontends maken gebruik van de `keycloak-js` library om de gebruiker te authenticeren en autoriseren. Dit heb ik gedaan met de volgende code:
+
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import Keycloak from 'keycloak-js';
+
+// Create a new instance of Keycloak using 'new'
+const keycloak = new Keycloak({
+    url: 'http://localhost:8080',
+    realm: 'myrealm',
+  clientId: 'myclient',
+});
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+keycloak.init({
+  onLoad: 'login-required',
+  silentCheckSsoRedirectUri: window.location.origin + '/silent-check-sso.html',
+  pkceMethod: 'S256',
+  redirectUri: window.location.origin,
+}).then((authenticated) => {
+    if (authenticated) {
+        root.render(
+            <React.StrictMode>
+                <App />
+            </React.StrictMode>
+        );
+    } else {
+        window.location.reload();
+    }
+}).catch((error) => {
+    console.error('Failed to initialize Keycloak:', error);
+});
+```
+
+In deze code zie je een aantal belangerijke dingen, zoals de `url`, `realm` en `clientId` van de keycloak server. Deze moeten overeenkomen met de configuratie van de keycloak server. Daarnaast zie je dat de `keycloak.init` functie wordt aangeroepen met een aantal opties, zoals `onLoad`, `silentCheckSsoRedirectUri`, `pkceMethod` en `redirectUri`. Deze opties zijn nodig om de gebruiker te authenticeren en autoriseren. Als de gebruiker geauthenticeerd is wordt de `App` gerenderd, anders wordt de pagina opnieuw geladen.
+
+
+<!-- 
+https://raw.githubusercontent.com/keycloak/keycloak-quickstarts/latest/kubernetes/keycloak.yaml 
+https://www.keycloak.org/getting-started/getting-started-kube
+-->

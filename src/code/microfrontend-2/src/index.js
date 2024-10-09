@@ -19,14 +19,12 @@ keycloak.init({
   redirectUri: window.location.origin,
 }).then((authenticated) => {
   if (authenticated) {
-    console.log('Page1')
         root.render(
             <React.StrictMode>
                 <App />
             </React.StrictMode>
         );
   } else {
-      console.log('Page11111')
       window.location.reload();
     }
 }).catch((error) => {
