@@ -4,15 +4,20 @@ import './index.css';
 import App from './App';
 import Keycloak from 'keycloak-js';
 
-const keycloak = Keycloak({
-    url: 'http://localhost:8080/auth',
-    realm: 'your-realm',
-    clientId: 'your-client-id',
+const keycloak = new Keycloak({
+    url: 'http://localhost:8080',
+    realm: 'myrealm',
+    clientId: 'myclient',
 });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-keycloak.init({ onLoad: 'login-required' }).then((authenticated) => {
+keycloak.init({
+  onLoad: 'login-required',
+  silentCheckSsoRedirectUri: window.location.origin + '/silent-check-sso.html',
+  pkceMethod: 'S256',
+  redirectUri: window.location.origin,
+}).then((authenticated) => {
     if (authenticated) {
         root.render(
             <React.StrictMode>
@@ -20,14 +25,6 @@ keycloak.init({ onLoad: 'login-required' }).then((authenticated) => {
             </React.StrictMode>
         );
     } else {
-        root.render(
-            <React.StrictMode>
-                <div>
-                    LOGIN REQUIRED
-                </div>
-            </React.StrictMode>
-        );
-        // Optionally, you can redirect to the login page or reload after a timeout
         window.location.reload();
     }
 }).catch((error) => {

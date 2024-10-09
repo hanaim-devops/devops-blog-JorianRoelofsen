@@ -15,6 +15,7 @@ spec:
       containers:
       - name: microfrontend-2
         image: jorianroelofsen13/microfrontend-2-image:latest  # Update with the correct image name
+        imagePullPolicy: "Always"
         ports:
         - containerPort: 80
 

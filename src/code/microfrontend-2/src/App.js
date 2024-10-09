@@ -5,7 +5,7 @@ import Page1 from './Page1';
 const App = () => (
     <Router>
         <Routes>
-            <Route path="/page1" element={<Page1 />} />
+            <Route path="/" element={<Page1 />} />
         </Routes>
     </Router>
 );

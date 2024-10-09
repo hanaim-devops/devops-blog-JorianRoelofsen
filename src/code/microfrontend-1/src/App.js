@@ -5,7 +5,7 @@ import Home from './Home'; // Ensure Page2 component exists
 const App = () => (
     <Router>
         <Routes>
-            <Route path="/Home" element={<Home />} />
+            <Route path="/" element={<Home />} />
         </Routes>
     </Router>
 );
