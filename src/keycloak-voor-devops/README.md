@@ -182,3 +182,11 @@ In deze code zie je een aantal belangerijke dingen, zoals de `url`, `realm` en `
 https://raw.githubusercontent.com/keycloak/keycloak-quickstarts/latest/kubernetes/keycloak.yaml 
 https://www.keycloak.org/getting-started/getting-started-kube
 -->
+
+## Conclusie
+
+Keycloak kan zeer effectief worden ingezet voor gebruikersbeheer en authenticatie binnen een moderne IT-infrastructuur, vooral dankzij de uitgebreide ondersteuning voor Single Sign-On (SSO), moderne authenticatieprotocollen zoals OpenID Connect en SAML 2.0, en de integratiemogelijkheden met populaire identiteitsproviders en gebruikersfederaties zoals LDAP en Active Directory. Deze eigenschappen maken het bijzonder geschikt voor omgevingen met microservices, Kubernetes, en cloud-native applicaties.
+
+Daarnaast biedt Keycloak extra beveiligingsopties zoals twee-factor authenticatie (2FA) en de mogelijkheid om gebruikersregistratie en -beheer centraal te regelen. Hoewel Keycloak zelf-hosting en onderhoud vereist, wat kan zorgen voor enige complexiteit, wegen de voordelen op het gebied van flexibiliteit, kostenbesparing (door het open-source karakter), en community-ondersteuning zwaar in moderne IT-omgevingen.
+
+Kortom, Keycloak is een veelzijdige en krachtige IAM-oplossing die organisaties in staat stelt om veilige en schaalbare gebruikersauthenticatie te implementeren zonder afbreuk te doen aan flexibiliteit of gebruikerservaring.
