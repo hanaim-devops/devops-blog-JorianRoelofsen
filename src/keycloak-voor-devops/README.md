@@ -1,6 +1,9 @@
 # Een andere kijk op inloggen: Keycloak voor DevOps
 
+<img src="./plaatjes/keycloak-logo.png" width="100" height="100" alt="keycloak-logo" style="float: right; margin-left: 10px;" />
+
 *[Jorian Roelofsen, oktober 2024.](https://github.com/hanaim-devops/devops-blog-JorianRoelofsen)*
+
 <hr/>
 
 Inloggen is altijd een hoop extra moeite in een project, vooral als je het werkend moet houden in in een microservices-architectuur. Keycloak is een open-source identity en access management tool die dit proces een stuk versimpeld. In deze blog ga ik in op de voordelen van Keycloak en hoe je het kan integreren in een moderne IT-infrastructuur.
@@ -115,7 +118,7 @@ spec:
 In de `microfrontend-2` en `microfrontend-3` yaml files heb ik de `microfrontend-1` vervangen met `microfrontend-2` en `microfrontend-3` en de nodePort aangepast naar `30082` en `30083` respectievelijk.
 
 Vervolgens heb ik de keycloak server geconfigureerd met een realm, client, voor de volledige tutorial zie de volgende bron(Keycloak, n.d.-b). Daarnaast heb ik ook nog een extra optie toegevoegd die er voor zorgt dat een gebruiker kan registreren. Dit heb ik gedaan door de `registration` optie aan te zetten in de realm settings.
-![registratie aanzetten](./plaatjes/image.png)
+![registratie aanzetten](./plaatjes/keycloak-registratie.png)
 
 De client is geconfigureerd met de redirect uri's van de frontends en de frontends zijn geconfigureerd met de client id en de keycloak server url. De frontends maken gebruik van de `keycloak-js` library om de gebruiker te authenticeren en autoriseren. Dit heb ik gedaan met de volgende code:
 
