@@ -1,6 +1,6 @@
 # Een andere kijk op inloggen: Keycloak voor DevOps
 
-<img src="./plaatjes/keycloak-logo.png" width="100" height="100" alt="keycloak-logo" style="float: right; margin-left: 10px;" />
+<img src="./plaatjes/keycloak-logo.png" width="150" height="150" alt="keycloak-logo" style="float: right; margin-left: 10px;" />
 
 *[Jorian Roelofsen, oktober 2024.](https://github.com/hanaim-devops/devops-blog-JorianRoelofsen)*
 
