@@ -170,26 +170,26 @@ Kortom, Keycloak is een veelzijdige en krachtige IAM-oplossing die organisaties 
 
 ## Bronnen
 
-FusionAuth. (n.d.). Keycloak alternatives. https://fusionauth.io/guides/keycloak-alternatives#fusionauth
+- FusionAuth. (n.d.). *Keycloak alternatives*. Geraadpleegd op 10 oktober 2024 van https://fusionauth.io/guides/keycloak-alternatives#fusionauth
 
-Intension. (n.d.-a). Keycloak advantages and disadvantages. https://www.intension.de/en/infoblog/keycloak-advantages-disadvantages/
+- Intension. (n.d.-a). *Keycloak advantages and disadvantages*. Geraadpleegd op 10 oktober 2024 van https://www.intension.de/en/infoblog/keycloak-advantages-disadvantages/
 
-Intension. (n.d.-b). Keycloak strengths. https://www.intension.de/en/infoblog/keycloak-strengths/
+- Intension. (n.d.-b). *Keycloak strengths*. Geraadpleegd op 10 oktober 2024 van https://www.intension.de/en/infoblog/keycloak-strengths/
 
-Intension. (n.d.-c). Problems with Keycloak. https://www.intension.de/en/infoblog/problems-with-keycloak/
+- Intension. (n.d.-c). *Problems with Keycloak*. Geraadpleegd op 10 oktober 2024 van https://www.intension.de/en/infoblog/problems-with-keycloak/
 
-Keycloak. (n.d.-a). Getting started with Keycloak on Kubernetes. https://www.keycloak.org/getting-started/getting-started-kube
+- Keycloak. (n.d.-a). *Getting started with Keycloak on Kubernetes*. Geraadpleegd op 10 oktober 2024 van https://www.keycloak.org/getting-started/getting-started-kube
 
-Keycloak. (n.d.-b). Keycloak quickstarts. https://raw.githubusercontent.com/keycloak/keycloak-quickstarts/latest/kubernetes/keycloak.yaml
+- Keycloak. (n.d.-b). *Keycloak quickstarts*. Geraadpleegd op 10 oktober 2024 van https://raw.githubusercontent.com/keycloak/keycloak-quickstarts/latest/kubernetes/keycloak.yaml
 
-Permify. (2024, June 23). Top open-source Keycloak alternatives. https://permify.co/post/top-open-source-keycloak-alternatives/#top-7-open-source-keycloak-alternatives
+- Permify. (2024, June 23). *Top open-source Keycloak alternatives*. Geraadpleegd op 10 oktober 2024 van https://permify.co/post/top-open-source-keycloak-alternatives/#top-7-open-source-keycloak-alternatives
 
-Pretius. (2024, April 11). Keycloak SSO. https://pretius.com/blog/keycloak-sso/
+- Pretius. (2024, April 11). *Keycloak SSO*. Geraadpleegd op 10 oktober 2024 van https://pretius.com/blog/keycloak-sso/
 
-Red Hat. (2022, June 28). What are OpenShift operators? https://www.redhat.com/en/technologies/cloud-computing/openshift/what-are-openshift-operators#what-is-an-operator
+- Red Hat. (2022, June 28). *What are OpenShift operators?* Geraadpleegd op 10 oktober 2024 van https://www.redhat.com/en/technologies/cloud-computing/openshift/what-are-openshift-operators#what-is-an-operator
 
-Reddit. (2020, May 4). Keycloak, FreeIPA, OpenLDAP pros and cons. https://www.reddit.com/r/linuxadmin/comments/gdegxl/keycloak_freeipa_openldap_proscons/
+- Reddit. (2020, May 4). *Keycloak, FreeIPA, OpenLDAP pros and cons*. Geraadpleegd op 10 oktober 2024 van https://www.reddit.com/r/linuxadmin/comments/gdegxl/keycloak_freeipa_openldap_proscons/
 
-Reddit. (2024, February 6). Is Keycloak worth the maintenance? https://www.reddit.com/r/devops/comments/1ak7pex/is_keycloak_worth_the_maintenance/
+- Reddit. (2024, February 6). *Is Keycloak worth the maintenance?* Geraadpleegd op 10 oktober 2024 van https://www.reddit.com/r/devops/comments/1ak7pex/is_keycloak_worth_the_maintenance/
 
-Zluri. (2024, August 1). Keycloak alternatives. https://www.zluri.com/blog/keycloak-alternatives/
+- Zluri. (2024, August 1). *Keycloak alternatives*. Geraadpleegd op 10 oktober 2024 van https://www.zluri.com/blog/keycloak-alternatives/
