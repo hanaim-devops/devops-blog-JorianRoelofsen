@@ -6,7 +6,7 @@
 
 <hr/>
 
-Inloggen is altijd een hoop extra moeite in een project, vooral als je het werkend moet houden in in een microservices-architectuur. Keycloak is een open-source identity en access management tool die dit proces een stuk versimpeld. In deze blog ga ik in op de voordelen van Keycloak en hoe je het kan integreren in een moderne IT-infrastructuur.
+Inloggen kan een aanzienlijke uitdaging zijn binnen projecten, vooral in een microservices-architectuur waar verschillende diensten met elkaar moeten communiceren. Het beheren van gebruikersidentiteiten en toegangsrechten vereist vaak complexe oplossingen. Keycloak, een open-source identity en access management tool, vereenvoudigt dit proces aanzienlijk. In deze blog verken ik de voordelen van Keycloak en laat ik zien hoe je het kunt integreren in een moderne IT-infrastructuur.
 
 ## Wat is Keycloak?
 
