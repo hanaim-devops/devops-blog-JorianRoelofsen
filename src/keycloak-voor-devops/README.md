@@ -75,6 +75,8 @@ Auth0 is een commercieel alternatief voor Keycloak en biedt een beheerde IAM-opl
 ## Keycloak in een microfrontend-architectuur?
 
 Voor deze vraag heb ik zelf een applicatie gebouwd met een microfrontend-architectuur en Keycloak geïntegreerd voor authenticatie en autorisatie. De applicatie bestaat uit drie microfrontends. Keycloak wordt gebruikt voor het inloggen en autoriseren van gebruikers. Bij het inloggen wordt een JWT-token gegenereerd en opgeslagen in de browser. Deze token wordt vervolgens gebruikt om de gebruiker te autoriseren voor toegang tot de ander microfrontends.
+![app](plaatjes/keycloak-app.png)
+Fig.1: Applicatie van keycloak
 
 Om te beginnen heb ik een keycloak server en 3 react frontends opgezet en geconfigureerd. De keycloak server draait op `http://localhost:8080` en de frontends op `http://localhost:30081`, `http://localhost:30082` en `http://localhost:30083`. Voor het maken van de keycloak instance heb ik gebruik gemaakt van de informatie gegeven in de github repository van keycloak(Keycloak, n.d.-a). Voor het maken van de react pods heb ik de volgende yaml files gebruikt:
 
@@ -118,7 +120,20 @@ spec:
 In de `microfrontend-2` en `microfrontend-3` yaml files heb ik de `microfrontend-1` vervangen met `microfrontend-2` en `microfrontend-3` en de nodePort aangepast naar `30082` en `30083` respectievelijk.
 
 Vervolgens heb ik de keycloak server geconfigureerd met een realm, client, voor de volledige tutorial zie de volgende bron(Keycloak, n.d.-b). Daarnaast heb ik ook nog een extra optie toegevoegd die er voor zorgt dat een gebruiker kan registreren. Dit heb ik gedaan door de `registration` optie aan te zetten in de realm settings.
+<div style="display: flex; justify-content: space-between;">
+  <div style="text-align: center; margin-right: 10px;">
+    <img src="plaatjes/create-realm.png" alt="Create Realm">
+    <p>Create Realm</p>
+  </div>
+  <div style="text-align: center; margin-left: 10px;">
+    <img src="plaatjes/create-client.png" alt="Create Client">
+    <p>Create Client</p>
+  </div>
+</div>
+Fig.2: Realm en client aanmaken in Keycloak
+
 ![registratie aanzetten](./plaatjes/keycloak-registratie.png)
+Fig.3: Registratie aanzetten in keycloak
 
 De client is geconfigureerd met de redirect uri's van de frontends en de frontends zijn geconfigureerd met de client id en de keycloak server url. De frontends maken gebruik van de `keycloak-js` library om de gebruiker te authenticeren en autoriseren. Dit heb ik gedaan met de volgende code:
 
